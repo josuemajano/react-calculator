@@ -1,27 +1,33 @@
-import logo from './logo.svg';
+// import { null } from "mathjs";
+import React, { Component } from "react";
+import { connect } from "react-redux";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          React Front-End Project, currently in Development.
-        </p>
-        <br/>
-        <p>Created by: Josue Majano</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="calculator-body">
+        <div className="display-block skewed-shadow">
+          <Display
+            display={this.props.display}/>
+        </div>
+        <div className="keypad-block">
+          <Keypad
+            dispaly={this.props.display}
+          />
+        </div>
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = state => {
+  const displayValue = showDisplay(state);
+  return ({
+    display: displayValue
+  });
+};
+
+export default connect(
+  mapStateToProps, null
+)(App)
