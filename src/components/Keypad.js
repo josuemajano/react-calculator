@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 // import { connect } from "react-redux";
+import SmallButton from "./SmallButton";
+import LargeHButton from "./LargeHButton";
+import LargeVButton from "./LargeVButton";
 import '../style/keypad.css';
+import '../style/buttons.css';
 
 class Keypad extends Component {
-    comstructor(props) {
+    constructor(props) {
         super(props);
     }
     render() {
@@ -15,7 +19,7 @@ class Keypad extends Component {
                        <SmallButton button={"/"} id={"divide"} type={'operator'} display={this.props.display}/>
                        <SmallButton button={"*"} id={"multiply"} type={'operator'} display={this.props.display}/>
                    </div>
-                   <div className="button-group-3x1">
+                   <div className="button-row-3x1">
                        <SmallButton button={"7"} id={"seven"} value={'7'} type={'num'}/>
                        <SmallButton button={"8"} id={"eight"} value={'8'} type={'num'}/>
                        <SmallButton button={"9"} id={"nine"} value={'9'} type={'num'}/> 

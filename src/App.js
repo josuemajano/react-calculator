@@ -1,7 +1,9 @@
-// import { null } from "mathjs";
 import React, { Component } from "react";
-// import { connect } from "react-redux";
-import './App.css';
+import { connect } from "react-redux";
+import Display from "./components/Display"
+import Keypad from "./components/Keypad"
+import { getDisplay } from "./selectors/Selectors"
+import './style/app.css';
 
 class App extends Component {
   render() {
@@ -13,7 +15,7 @@ class App extends Component {
         </div>
         <div className="keypad-block">
           <Keypad
-            dispaly={this.props.display}
+            display={this.props.display}
           />
         </div>
       </div>
@@ -22,12 +24,10 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
-  const displayValue = showDisplay(state);
+  const displayValue = getDisplay(state);
   return ({
     display: displayValue
   });
 };
 
-export default connect(
-  mapStateToProps, null
-)(App)
+export default connect(mapStateToProps, null)(App)
