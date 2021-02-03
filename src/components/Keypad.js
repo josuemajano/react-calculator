@@ -7,6 +7,7 @@ import '../style/keypad.css';
 import '../style/buttons.css';
 
 class Keypad extends Component {
+    // eslint-disable-next-line
     constructor(props) {
         super(props);
     }

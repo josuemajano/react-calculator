@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { updateDisplay } from "../actions/actions";
-import { adding } from "../actions/actions";
-import { equals } from "../actions/actions";
+// import { adding } from "../actions/actions";
+// import { equals } from "../actions/actions";
 import "../style/buttons.css";
 
 class LargeHButton extends Component {

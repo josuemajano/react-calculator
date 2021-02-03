@@ -14,7 +14,7 @@ const initalState = {
     history: '0'
 }
 
-export default function (state = initalState, action) {
+export default function foo(state = initalState, action) {
     switch (action.type) {
         case UPDATE: {
             const updateDisplay = action.payload;
@@ -25,7 +25,7 @@ export default function (state = initalState, action) {
             } else {
                 return {
                     ...state,
-                    display: state.display == '0' || state.prevOp === "operator" ? updateDisplay.input
+                    display: state.display === '0' || state.prevOp === "operator" ? updateDisplay.input
                         : state.display + updateDisplay.input,
                     prevOp: updateDisplay.operation,
                 }
@@ -38,8 +38,8 @@ export default function (state = initalState, action) {
             return {
                 ...state,
                 display: state.display,
-                history: state.history == '0' && state.accumulated == "0" ? state.display + "+"
-                    : state.accumulated != "0" ? state.accumulated + "+"
+                history: state.history === '0' && state.accumulated === "0" ? state.display + "+"
+                    : state.accumulated !== "0" ? state.accumulated + "+"
                         : history() + state.display + "+",
                 prevOp: "operator"
             }
@@ -50,8 +50,8 @@ export default function (state = initalState, action) {
             return {
                 ...state,
                 display: state.display,
-                history: state.history == '0' && state.accumulated == "0" ? state.display + "-"
-                    : state.accumulated != "0" ? state.accumulated + "-"
+                history: state.history === '0' && state.accumulated === "0" ? state.display + "-"
+                    : state.accumulated !== "0" ? state.accumulated + "-"
                         : history() + state.display + "-",
                 prevOp: "operator"
             }
@@ -62,8 +62,8 @@ export default function (state = initalState, action) {
             return {
                 ...state,
                 display: state.display,
-                history: state.history == '0' && state.accumulated == "0" ? state.display + "*"
-                    : state.accumulated != "0" ? state.accumulated + "*"
+                history: state.history === '0' && state.accumulated === "0" ? state.display + "*"
+                    : state.accumulated !== "0" ? state.accumulated + "*"
                         : history() + state.display + "*",
                 prevOp: "operator"
             }
@@ -74,8 +74,8 @@ export default function (state = initalState, action) {
             return {
                 ...state,
                 display: state.display,
-                history: state.history == '0' && state.accumulated == "0" ? state.display + "/"
-                    : state.accumulated != "0" ? state.accumulated + "/"
+                history: state.history === '0' && state.accumulated === "0" ? state.display + "/"
+                    : state.accumulated !== "0" ? state.accumulated + "/"
                         : history() + state.display + "/",
                 prevOp: "operator"
             }
