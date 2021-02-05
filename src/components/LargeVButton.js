@@ -30,10 +30,10 @@ class LargeVButton extends Component {
     }
 }
 
-const MapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
     updateDisplay: display => dispatch(updateDisplay(display)),
     add: display => dispatch(adding(display)),
     equal: display => dispatch(equals(display)),
 });
 
-export default connect(null, MapDispatchToProps)(LargeVButton);
+export default connect(null, mapDispatchToProps)(LargeVButton);

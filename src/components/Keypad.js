@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { connect } from "react-redux";
 import SmallButton from "./SmallButton";
 import LargeHButton from "./LargeHButton";
 import LargeVButton from "./LargeVButton";
@@ -7,10 +6,6 @@ import '../style/keypad.css';
 import '../style/buttons.css';
 
 class Keypad extends Component {
-    // eslint-disable-next-line
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div className="keypad">
@@ -46,7 +41,7 @@ class Keypad extends Component {
                    <LargeVButton button={"="} id={"equals"} type={'operator'} display={this.props.display}/>
                </div>
             </div>
-        )
+        );
     }
 }
 

@@ -14,7 +14,7 @@ const initalState = {
     history: '0'
 }
 
-export default function foo(state = initalState, action) {
+const someFunction = (state = initalState, action) => {
     switch (action.type) {
         case UPDATE: {
             const updateDisplay = action.payload;
@@ -38,9 +38,9 @@ export default function foo(state = initalState, action) {
             return {
                 ...state,
                 display: state.display,
-                history: state.history === '0' && state.accumulated === "0" ? state.display + "+"
-                    : state.accumulated !== "0" ? state.accumulated + "+"
-                        : history() + state.display + "+",
+                history: state.history === '0' && state.accumulated === "0" ? state.display + " + "
+                    : state.accumulated !== "0" ? state.accumulated + " + "
+                        : history() + state.display + " + ",
                 prevOp: "operator"
             }
         }
@@ -50,9 +50,9 @@ export default function foo(state = initalState, action) {
             return {
                 ...state,
                 display: state.display,
-                history: state.history === '0' && state.accumulated === "0" ? state.display + "-"
-                    : state.accumulated !== "0" ? state.accumulated + "-"
-                        : history() + state.display + "-",
+                history: state.history === '0' && state.accumulated === "0" ? state.display + " - "
+                    : state.accumulated !== "0" ? state.accumulated + " - "
+                        : history() + state.display + " - ",
                 prevOp: "operator"
             }
         }
@@ -62,9 +62,9 @@ export default function foo(state = initalState, action) {
             return {
                 ...state,
                 display: state.display,
-                history: state.history === '0' && state.accumulated === "0" ? state.display + "*"
-                    : state.accumulated !== "0" ? state.accumulated + "*"
-                        : history() + state.display + "*",
+                history: state.history === '0' && state.accumulated === "0" ? state.display + " * "
+                    : state.accumulated !== "0" ? state.accumulated + " * "
+                        : history() + state.display + " * ",
                 prevOp: "operator"
             }
         }
@@ -74,9 +74,9 @@ export default function foo(state = initalState, action) {
             return {
                 ...state,
                 display: state.display,
-                history: state.history === '0' && state.accumulated === "0" ? state.display + "/"
-                    : state.accumulated !== "0" ? state.accumulated + "/"
-                        : history() + state.display + "/",
+                history: state.history === '0' && state.accumulated === "0" ? state.display + " / "
+                    : state.accumulated !== "0" ? state.accumulated + " / "
+                        : history() + state.display + " / ",
                 prevOp: "operator"
             }
         }
@@ -111,3 +111,5 @@ export default function foo(state = initalState, action) {
             return state;
     }
 }
+
+export default someFunction;

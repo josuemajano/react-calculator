@@ -7,7 +7,7 @@ class Display extends Component {
             <div className="lcd-screen" id="display">
                 {this.props.display}
             </div>
-        )
+        );
     }
 }
 

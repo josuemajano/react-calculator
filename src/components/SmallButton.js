@@ -32,7 +32,7 @@ class SmallButton extends Component {
             <button 
                 id={this.props.id}
                 value={this.props.value}
-                className="button-small"
+                className="small-button"
                 onClick={this.handleClick}
             >
                 {this.props.button}
@@ -41,7 +41,7 @@ class SmallButton extends Component {
     }
 }
 
-const MapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
     updateDisplay: display => dispatch(updateDisplay(display)),
     subtract: display => dispatch(subtracting(display)),
     multiply: display => dispatch(multipling(display)),
@@ -49,4 +49,4 @@ const MapDispatchToProps = dispatch => ({
     clear: display => dispatch(clearDisplay(display))
 });
 
-export default connect(null, MapDispatchToProps)(SmallButton);
+export default connect(null, mapDispatchToProps)(SmallButton);

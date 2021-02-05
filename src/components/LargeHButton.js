@@ -29,8 +29,8 @@ class LargeHButton extends Component {
     }
 }
 
-const MapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
     display: display => dispatch(updateDisplay(display)),
 });
 
-export default connect(null, MapDispatchToProps)(LargeHButton);
+export default connect(null, mapDispatchToProps)(LargeHButton);
