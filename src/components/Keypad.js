@@ -12,8 +12,8 @@ class Keypad extends Component {
                <div className="button-group-3x4">
                    <div className="button-row-3x1">
                        <SmallButton button={"C"} id={"clear"} type={'clear'}/>
-                       <SmallButton button={"/"} id={"divide"} type={'operator'} display={this.props.display}/>
-                       <SmallButton button={"*"} id={"multiply"} type={'operator'} display={this.props.display}/>
+                       <SmallButton button={"÷"} id={"divide"} type={'operator'} display={this.props.display}/>
+                       <SmallButton button={"x"} id={"multiply"} type={'operator'} display={this.props.display}/>
                    </div>
                    <div className="button-row-3x1">
                        <SmallButton button={"7"} id={"seven"} value={'7'} type={'num'}/>
