@@ -11,7 +11,7 @@ const initalState = {
     display: '0',
     prevOp: "",
     accumulated: "0",
-    history: '0'
+    history: "0"
 }
 
 const someFunction = (state = initalState, action) => {
@@ -38,8 +38,8 @@ const someFunction = (state = initalState, action) => {
             return {
                 ...state,
                 display: state.display,
-                history: state.history === '0' && state.accumulated === "0" ? state.display + " + "
-                    : state.accumulated !== "0" ? state.accumulated + " + "
+                history: state.history && state.accumulated ? state.display + " + "
+                    : state.accumulated ? state.accumulated + " + "
                         : history() + state.display + " + ",
                 prevOp: "operator"
             }
@@ -50,8 +50,8 @@ const someFunction = (state = initalState, action) => {
             return {
                 ...state,
                 display: state.display,
-                history: state.history === '0' && state.accumulated === "0" ? state.display + " - "
-                    : state.accumulated !== "0" ? state.accumulated + " - "
+                history: state.history && state.accumulated ? state.display + " - "
+                    : state.accumulated ? state.accumulated + " - "
                         : history() + state.display + " - ",
                 prevOp: "operator"
             }
@@ -62,8 +62,8 @@ const someFunction = (state = initalState, action) => {
             return {
                 ...state,
                 display: state.display,
-                history: state.history === '0' && state.accumulated === "0" ? state.display + " * "
-                    : state.accumulated !== "0" ? state.accumulated + " * "
+                history: state.history && state.accumulated ? state.display + " * "
+                    : state.accumulated ? state.accumulated + " * "
                         : history() + state.display + " * ",
                 prevOp: "operator"
             }
@@ -74,8 +74,8 @@ const someFunction = (state = initalState, action) => {
             return {
                 ...state,
                 display: state.display,
-                history: state.history === '0' && state.accumulated === "0" ? state.display + " / "
-                    : state.accumulated !== "0" ? state.accumulated + " / "
+                history: state.history && state.accumulated ? state.display + " / "
+                    : state.accumulated ? state.accumulated + " / "
                         : history() + state.display + " / ",
                 prevOp: "operator"
             }

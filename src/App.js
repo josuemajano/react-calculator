@@ -8,6 +8,7 @@ import './style/app.css';
 class App extends Component {
   render() {
     return (
+      // <><h1 className="ady-header">Adalynn's Calculator</h1>
       <div className="calculator-body">
         <div className="display-block skewed-shadow">
           <Display
